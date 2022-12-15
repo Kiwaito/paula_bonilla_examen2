@@ -1,0 +1,164 @@
+:root {
+    --rojo: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --naranja: hsl(34, 97%, 64%);
+    --azul: hsl(212, 86%, 64%);
+    --blanco: hsl(0, 0%, 98%);
+    --gris: hsl(229, 6%, 66%);
+    --oscuro: hsl(234, 12%, 34%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* G E N E R A L E S */
+body {
+    font-size: 1.6rem;
+    background: var(--blanco);
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    color: var(--gris);
+}
+
+/* H E A D E R */
+header {
+    text-align: center;
+    line-height: 2rem;
+    margin-top: 10rem;
+}
+
+h1, h2 {
+    font-size: 3rem;
+}
+
+h1 {
+    font-weight: 200;
+}
+
+h2 {
+    color: var(--oscuro);
+}
+
+header p {
+    padding: 0 4rem;
+}
+
+
+/* C A R T A S */
+
+.padre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.card {
+    background: white;
+    border-radius: .5rem;
+    box-shadow: 1rem 1rem 2rem var(--gris);
+    padding: 3rem;
+    margin: 1rem;
+    width: 32rem;
+    height: 25rem;
+    position: relative;
+}
+
+.screenpc .card {
+    margin: 3rem;
+}
+
+.card b {
+    font-size: 2rem;
+    color: var(--oscuro);
+}
+
+.card .peque {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.cyan {
+    border-top: .5rem solid var(--cyan);
+}
+
+.rojo {
+    border-top: .5rem solid var(--rojo);
+}
+
+.amarillo {
+    border-top: .5rem solid var(--naranja);
+}
+
+.azul {
+    border-top: .5rem solid var(--azul);
+}
+
+.imagen {
+    width: 7rem;
+    height: 7rem;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 3rem;
+    bottom: 3rem;
+}
+
+.supervisor {
+    background-image: url(../img/icon-supervisor.svg);
+}
+
+.builder {
+    background-image: url(../img/icon-team-builder.svg);
+}
+
+.karma {
+    background-image: url(../img/icon-karma.svg);
+}
+
+.calculator {
+    background-image: url(../img/icon-calculator.svg);
+}
+
+footer {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--gris);
+    margin: 2rem 0;
+}
+
+@media (min-width:768px) {
+    h1, h2 {
+        font-size: 4rem;
+        line-height: 0rem;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 5rem
+    }
+
+    header p {
+        width: 62rem;
+        line-height: 2.5rem;
+    }
+
+    .padre {
+        flex-direction: row;
+        margin-top:1rem;
+    }
+
+    .screenpc .card {
+        margin: 3rem;
+    }
+}
